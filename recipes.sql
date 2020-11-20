@@ -43,7 +43,7 @@ INSERT INTO RecipeIngredient (recipe_id, ingredient_id, measure_id, amount)  VAL
 /*MY ADDITIONS TO THE DATABASE*/ 
 
 /* INSERT INTO Ingredient table all the ingredient values listed in my recipes (index begins at 7 and goes to 21) */
-INSERT INTO Ingredient (name) VALUES('oats'), ('cashews'), ('honey'), ('broth'), ('carrots'), ('noodles'), ('fruit'), ('kale'), ('ice'), ('flax'), ('banana'), ('blueberries'), ('bread'), ('peanuts'). ('jelly');
+INSERT INTO Ingredient (name) VALUES('oats'), ('cashews'), ('honey'), ('broth'), ('carrots'), ('noodles'), ('fruit'), ('kale'), ('ice'), ('flax'), ('banana'), ('blueberries'), ('bread'), ('peanuts'), ('jelly');
 
 /* adds Granola recipe to Recipe table */
 INSERT INTO Recipe (name, description, instructions) VALUES('Granola', 'crunchy snack', 'Add oats, cashews, and honesy to sheet pan. Bake at 350 for 1 hour');
@@ -96,6 +96,6 @@ SELECT *
 From Recipe r
 JOIN RecipeIngredient ri on ri.recipe_id = r.id  
 JOIN Ingredient i on i.id = ri.ingredient_id 
-WHERE i.name = cashews 
+WHERE i.name = 'cashews' 
 
 /*update a recipe I added to database lab */
